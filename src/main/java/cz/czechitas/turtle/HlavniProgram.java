@@ -126,7 +126,6 @@ public class HlavniProgram {
 
         nakreslitMaleKolecko(snehulakBarva, 15);
     }
-
     public void nakresliRovnostrannyTrojuhelnik(double velikostStrany, Color barvaCary) {
         // Zde lze používat proměnnou velikostStrany.
         // Jeji hodnota je takova, s jakou byla metoda zavolana
