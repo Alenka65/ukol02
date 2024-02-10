@@ -22,20 +22,59 @@ public class HlavniProgram {
         Color modraBarva;
         Color hnedaBarva;
         Color cherryBarva;
+        Color snehulakBarva;
         cervenaBarva=new Color(255,0,0);
-        modraBarva = new Color (0,127,255);
-        hnedaBarva = new Color (184, 115, 51);
+        modraBarva = new Color(0,127,255);
+        hnedaBarva = new Color(184, 115, 51);
         cherryBarva = new Color(210, 4, 45);
+        snehulakBarva = new Color(135, 206, 235);
 
+//        nakreslitKornout(hnedaBarva, 200, 175);
+//
+//        //presun
+//        zofka.penUp();
+//        zofka.turnRight(180);
+//        zofka.move(200);
+//
+//        nakreslitKolecko(cherryBarva, 38);
+        nakreslitSpodniKolecko(snehulakBarva, 35);
 
-        nakreslitKornout(hnedaBarva, 200, 175);
+        //presun
+        zofka.penUp();
+        zofka.move(120);
+        zofka.turnRight(90);
+        zofka.move(115);
+        zofka.turnRight(180);
+
+        nakreslitStredniKolecko(snehulakBarva, 25);
+
+        //presun
+        zofka.penUp();
+        zofka.turnRight(90);
+        zofka.move(150);
+        zofka.turnLeft(90);
+        zofka.move(20);
+        zofka.turnLeft(180);
+
+        nakreslitVrchniKolecko(snehulakBarva, 20);
+
+        //presun
+        zofka.penUp();
+        zofka.turnRight(90);
+        zofka.move(100);
+        zofka.turnLeft(90);
+        zofka.move(105);
+
+        nakreslitMaleKolecko(snehulakBarva, 10);
 
         //presun
         zofka.penUp();
         zofka.turnRight(180);
-        zofka.move(200);
+        zofka.move(170);
+        zofka.turnRight(90);
+        zofka.move(20);
 
-        nakreslitKolecko(cherryBarva, 38);
+        nakreslitMaleKolecko(snehulakBarva, 10);
 
     }
 
@@ -73,6 +112,48 @@ public class HlavniProgram {
             zofka.turnLeft(20);
         }
     }
+
+    public void nakreslitSpodniKolecko(Color barvaCary, double spodniKolecko) {
+
+        zofka.penDown();
+        zofka.setPenColor(barvaCary);
+
+        for (int i = 0; i < 18; i++) {
+            zofka.move(spodniKolecko);
+            zofka.turnRight(20);
+        }
+    }
+
+    public void nakreslitStredniKolecko(Color barvaCary, double stredniKolecko) {
+
+        zofka.penDown();
+        zofka.setPenColor(barvaCary);
+        for (int i = 0; i < 18; i++) {
+            zofka.move(stredniKolecko);
+            zofka.turnRight(20);
+        }
+    }
+
+    public void nakreslitVrchniKolecko(Color barvaCary, double vrchniKolecko) {
+
+        zofka.penDown();
+        zofka.setPenColor(barvaCary);
+        for (int i = 0; i < 18; i++) {
+            zofka.move(vrchniKolecko);
+            zofka.turnLeft(20);
+        }
+    }
+
+    public void nakreslitMaleKolecko(Color barvaCary, double maleKolecko) {
+
+        zofka.penDown();
+        zofka.setPenColor(barvaCary);
+        for (int i = 0; i < 18; i++) {
+            zofka.move(maleKolecko);
+            zofka.turnLeft(20);
+        }
+    }
+
 
     public static void main(String[] args) {
 
